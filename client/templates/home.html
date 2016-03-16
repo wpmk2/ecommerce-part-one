@@ -1,9 +1,13 @@
-<h1>Home Store View</h1>
+<h2>Products</h2>
 
+Search: <input type="text" ng-model="searchTerm">
+<button ui-sref="cart">View My Cart</button>
 <ul>
-	<li ng-repeat="prod in products">
-		{{prod.name}}
-		${{prod.price}}
-		Category: {{prod.category}}
+	<li ng-repeat="prod in products | filter: searchTerm">
+		<h3>{{prod.Title}}</h3>
+		Price: {{prod.Price}}
+		<br>
+		Description: {{prod.Description}}
+		<button ng-if="authed" ng-click="addToCart(prod)">Add to Cart</button>
 	</li>
 </ul>

@@ -12,7 +12,25 @@ angular.module('ecommerceApp', ['ui.router'])
                 .state('admin', {
                     url: '/admin',
                     templateUrl: 'templates/admin.html',
-                    controller: 'adminController'
+                    controller: 'adminCtrl'
+                })
+                
+                .state('orders', {
+                    url: '/orders',
+                    templateUrl: 'templates/orders.html',
+                    controller: 'adminCtrl'
+                })
+                
+                .state('cart', {
+                    url: '/cart',
+                    templateUrl: 'templates/cart.html',
+                    controller: 'cartCtrl'
+                })
+                
+                .state('user', {
+                    url: '/user',
+                    templateUrl: 'templates/user.html',
+                    controller: 'homeCtrl'
                 })
                 
         });

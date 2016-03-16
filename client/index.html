@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
-<body ng-app="ecommerceApp">
-	<navbar>
-		<a ui-sref="home">Home Page</a>
-		<a ui-sref="admin">Admin Page</a>
-	</navbar>
-	<ui-view></ui-view>
+
+<body ng-app="ecommerceApp" ng-controller="userCtrl">
+	<div id="mainview">
+		<navbar>
+			<h1>COMIC SANS STUFF SELLERS</h1>
+			<h3>WE SELL THE STUFF</h3>
+			<a ui-sref="home">Products</a>
+			<a ui-sref="admin" ng-if="authed">Admin</a>
+			<a ui-sref="user">Login/Logout</a>
+		</navbar>
+		<ui-view></ui-view>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 	<script src='app.js'></script>
 	<script src='controllers/homeCtrl.js'></script>
 	<script src='controllers/adminCtrl.js'></script>
+	<script src='controllers/cartCtrl.js'></script>
+	<script src='controllers/userCtrl.js'></script>
 	<script src='services/commerceService.js'></script>
+	<script src='services/userService.js'></script>
 </body>
+
 </html>

@@ -1,0 +1,27 @@
+{
+  "name": "ecommerce-part-one",
+  "version": "1.0.0",
+  "description": "eCommerce Project - Part I\r =================",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wpmk2/ecommerce-part-one.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wpmk2/ecommerce-part-one/issues"
+  },
+  "homepage": "https://github.com/wpmk2/ecommerce-part-one#readme"
+}

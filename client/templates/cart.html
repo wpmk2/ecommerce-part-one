@@ -1,0 +1,14 @@
+<h2>My Cart</h2>
+
+Cart Subtotal: {{subtotal}}
+
+<ul>
+	<li ng-repeat="prod in myCart">
+		<h3>{{prod.Title}}</h3>
+		Price: {{prod.Price}}
+		<br>
+		Description: {{prod.Description}}
+		<button ng-click="{{myCart.splice(indexOf(prod), 1)}}">Remove</button>
+	</li>
+</ul>
+
